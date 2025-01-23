@@ -1,0 +1,35 @@
+@use "../../../styles/global";
+
+.input-wrapper{
+  color: global.$text-color;
+  font-size: 16px;
+
+  label {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .input-content{
+    width: 100%;
+    display: flex;
+
+    input{
+      border: none;
+      border-radius: 8px 0 0 8px;
+      background-color: global.$gray-secondary-bg;
+      padding: 12px 0 12px 20px;
+      width: 100%;
+    }
+
+    .icon {
+      padding: 12px;
+      background-color: global.$primary-color;
+      border-radius: 0 8px 8px 0;
+
+      img {
+        height: 20px;
+      }
+    }
+  }
+}
+
