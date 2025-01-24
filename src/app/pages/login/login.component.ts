@@ -6,6 +6,11 @@ import { DefaultLoginLayoutComponent } from '../../components/default-login-layo
 import { PrimaryInputComponent } from '../../components/primary-input/primary-input.component';
 import { LoginService } from '../../services/login.service';
 
+interface LoginForm {
+  email: FormControl,
+  password: FormControl
+}
+
 @Component({
   selector: 'app-login',
   imports: [DefaultLoginLayoutComponent, ReactiveFormsModule, PrimaryInputComponent],
@@ -14,7 +19,7 @@ import { LoginService } from '../../services/login.service';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-  loginForm!: FormGroup;
+  loginForm!: FormGroup<LoginForm>;
 
   constructor(private router: Router, private loginService: LoginService, private toastService: ToastrService){
     this.loginForm = new FormGroup({
